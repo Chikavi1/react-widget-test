@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba de Widget PulseTrack</title>
+</head>
+<body class="bg-gray-100">
+
+    <h1 class="p-10 text-center text-2xl font-bold">Probando mi Widget de React, chinga tu madre brayan</h1>
+
+    <div id="mi-chat-contenedor" style="width: 450px;"></div>
+
+    <script>
+        window.process = {
+            env: {
+                NODE_ENV: 'production'
+            }
+        };
+    </script>
+
+    <script src="./dist/chat.umd.js"></script>
+
+    <script>
+        // 3. Inicializamos
+        if (window.Chat) {
+            window.Chat.init('mi-chat-contenedor');
+        } else {
+            console.error("El widget 'Chat' no se cargó correctamente.");
+        }
+    </script>
+</body>
+</html>

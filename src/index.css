@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* Fuerza a Tailwind a escanear todos tus componentes */
+@source "../src/**/*.{ts,tsx}";
+
+/* Opcional: Solo para probar que el CSS se inyecta, añade este fondo */
+@layer base {
+  #mi-chat-contenedor {
+    display: block !important;
+  }
+}
+
+ 
